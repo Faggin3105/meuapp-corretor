@@ -12,6 +12,37 @@ df = pd.read_csv('data/dataset_imoveis.csv')
 
 st.set_page_config(page_title="Corretor AI - Sistema Imobiliário", layout="centered")
 
+# Dicionário completo de estados e cidades do Brasil (exemplo parcial para simplificação)
+estados_cidades = {
+    "AC": ["Rio Branco"],
+    "AL": ["Maceió"],
+    "AP": ["Macapá"],
+    "AM": ["Manaus"],
+    "BA": ["Salvador", "Feira de Santana", "Ilhéus"],
+    "CE": ["Fortaleza"],
+    "DF": ["Brasília"],
+    "ES": ["Vitória"],
+    "GO": ["Goiânia"],
+    "MA": ["São Luís"],
+    "MT": ["Cuiabá"],
+    "MS": ["Campo Grande"],
+    "MG": ["Belo Horizonte", "Uberlândia", "Ouro Preto"],
+    "PA": ["Belém"],
+    "PB": ["João Pessoa"],
+    "PR": ["Curitiba"],
+    "PE": ["Recife"],
+    "PI": ["Teresina"],
+    "RJ": ["Rio de Janeiro", "Niterói", "Petrópolis"],
+    "RN": ["Natal"],
+    "RS": ["Porto Alegre"],
+    "RO": ["Porto Velho"],
+    "RR": ["Boa Vista"],
+    "SC": ["Florianópolis"],
+    "SP": ["São Paulo", "Campinas", "Santos"],
+    "SE": ["Aracaju"],
+    "TO": ["Palmas"]
+}
+
 # Navegação por abas
 aba = st.sidebar.radio("Escolha uma função:", [
     "🏠 Avaliação de Imóveis",
@@ -35,15 +66,16 @@ if aba == "🏠 Avaliação de Imóveis":
     with st.form("form_avaliacao"):
         col1, col2 = st.columns(2)
         with col1:
+            estado = st.selectbox("Estado", list(estados_cidades.keys()))
+            cidade = st.selectbox("Cidade", estados_cidades[estado])
             bairro = st.selectbox("Bairro", ['Centro', 'Moema', 'Itaim', 'Bela Vista', 'Tatuapé'])
-            cidade = st.selectbox("Cidade", ['São Paulo'])
-            tipo = st.selectbox("Tipo de Imóvel", ['Apartamento', 'Casa'])
-            m2 = st.slider("Área (m²)", 30, 300, 85)
+            tipo = st.selectbox("Tipo de Imóvel", ['Apartamento', 'Casa', 'Lote/Área', 'Comercial'])
+            m2 = st.slider("Área (m²)", 30, 2000, 85)
             ano = st.slider("Ano de Construção", 1970, 2024, 2010)
         with col2:
-            quartos = st.slider("Quartos", 1, 5, 2)
-            banheiros = st.slider("Banheiros", 1, 4, 2)
-            garagem = st.slider("Vagas de Garagem", 0, 3, 1)
+            quartos = st.slider("Quartos", 0, 10, 2)
+            banheiros = st.slider("Banheiros", 0, 6, 2)
+            garagem = st.slider("Vagas de Garagem", 0, 6, 1)
             mobilia = st.selectbox("Mobilia", ['Nenhuma', 'Armários', 'Completa'])
 
         submit = st.form_submit_button("Avaliar")
@@ -52,8 +84,9 @@ if aba == "🏠 Avaliação de Imóveis":
         mobilia_valor = le_dict['mobilia'].transform([mobilia])[0]
 
         entrada = pd.DataFrame([{
-            'bairro': le_dict['bairro'].transform([bairro])[0],
+            'estado': le_dict['estado'].transform([estado])[0],
             'cidade': le_dict['cidade'].transform([cidade])[0],
+            'bairro': le_dict['bairro'].transform([bairro])[0],
             'tipo': le_dict['tipo'].transform([tipo])[0],
             'm2': m2,
             'quartos': quartos,
@@ -111,3 +144,4 @@ elif aba == "👤 Análise de Perfil":
     st.title("👤 Módulo em construção")
 elif aba == "📅 Agenda de Eventos":
     st.title("📅 Módulo em construção")
+
