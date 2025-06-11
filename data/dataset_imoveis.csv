@@ -1,6 +1,28 @@
 estado,cidade,bairro,tipo,m2,quartos,banheiros,garagem,ano,mobilia,valor
-SP,São Paulo,Moema,Apartamento,80,2,2,1,2015,Completa,650000
-SP,São Paulo,Itaim,Apartamento,65,1,1,1,2018,Armários,480000
-RJ,Rio de Janeiro,Centro,Comercial,120,0,2,0,2010,Nenhuma,780000
-MG,Belo Horizonte,Centro,Casa,100,3,2,2,2005,Armários,590000
-BA,Salvador,Itapuã,Lote/Área,1000,0,0,0,2000,Nenhuma,950000
+Acre,Rio Branco,Centro,Casa,80,2,1,1,2010,Nenhuma,200000
+Alagoas,Macei√≥,Paju√ßara,Apartamento,90,3,2,2,2015,Arm√°rios,350000
+Amap√°,Macap√°,Centro,Casa,75,2,1,1,2012,Completa,220000
+Amazonas,Manaus,Adrian√≥polis,Apartamento,100,3,2,1,2018,Completa,450000
+Bahia,Salvador,Barra,Lote/√Årea,1000,0,0,0,2000,Nenhuma,700000
+Cear√°,Fortaleza,Meireles,Apartamento,85,2,2,1,2017,Arm√°rios,320000
+Distrito Federal,Bras√≠lia,Asa Sul,Comercial,120,0,2,1,2010,Nenhuma,800000
+Esp√≠rito Santo,Vit√≥ria,Praia do Canto,Apartamento,95,3,2,2,2016,Completa,470000
+Goi√°s,Goi√¢nia,Centro,Casa,70,2,1,1,2011,Arm√°rios,210000
+Maranh√£o,S√£o Lu√≠s,Renascen√ßa,Apartamento,80,2,2,1,2014,Completa,300000
+Mato Grosso,Cuiab√°,Centro,Casa,85,3,2,1,2013,Arm√°rios,280000
+Mato Grosso do Sul,Campo Grande,Jardim dos Estados,Apartamento,90,3,2,2,2017,Completa,340000
+Minas Gerais,Belo Horizonte,Savassi,Apartamento,100,3,2,2,2018,Completa,500000
+Par√°,Bel√©m,Marco,Casa,75,2,1,1,2010,Nenhuma,230000
+Para√≠ba,Jo√£o Pessoa,Tamba√∫,Apartamento,85,3,2,1,2015,Completa,370000
+Paran√°,Curitiba,Batel,Apartamento,95,3,2,2,2016,Completa,520000
+Pernambuco,Recife,Boa Viagem,Apartamento,100,3,3,2,2018,Completa,560000
+Piau√≠,Teresina,Centro,Casa,80,2,2,1,2012,Arm√°rios,250000
+Rio de Janeiro,Rio de Janeiro,Copacabana,Apartamento,90,2,2,1,2014,Completa,600000
+Rio Grande do Norte,Natal,Ponta Negra,Apartamento,85,2,2,1,2015,Arm√°rios,330000
+Rio Grande do Sul,Porto Alegre,Moinhos de Vento,Apartamento,95,3,2,2,2016,Completa,470000
+Rond√¥nia,Porto Velho,Centro,Casa,80,2,1,1,2010,Nenhuma,200000
+Roraima,Boa Vista,Centro,Casa,75,2,1,1,2011,Arm√°rios,190000
+Santa Catarina,Florian√≥polis,Centro,Apartamento,90,3,2,1,2017,Completa,480000
+S√£o Paulo,S√£o Paulo,Moema,Apartamento,100,3,2,2,2018,Completa,750000
+Sergipe,Aracaju,Atalaia,Apartamento,85,2,2,1,2015,Arm√°rios,310000
+Tocantins,Palmas,Plano Diretor,Casa,80,2,1,1,2012,Nenhuma,210000
