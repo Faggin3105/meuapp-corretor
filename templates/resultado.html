@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultado da Avaliação</title>
+</head>
+<body>
+  <h1>Resultado</h1>
+  <p><strong>Valor Estimado:</strong> R$ {{ valor_estimado }}</p>
+  <p><strong>Valor por m²:</strong> R$ {{ valor_m2 }}</p>
+  <h2>Distribuição de Imóveis por Faixa de Preço</h2>
+  <img src="{{ url_for('static', filename='grafico.png') }}" alt="Gráfico de distribuição">
+  <br><br>
+  <a href="/">Voltar</a>
+</body>
+</html>

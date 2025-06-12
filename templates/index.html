@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Avaliação de Imóveis</title>
+</head>
+<body>
+  <h1>Avaliação de Imóveis</h1>
+  <form method="POST" action="/avaliar">
+    <label for="estado">Estado:</label>
+    <select name="estado" id="estado">
+      {% for estado in estados %}
+        <option value="{{ estado }}">{{ estado }}</option>
+      {% endfor %}
+    </select><br>
+
+    <label for="cidade">Cidade:</label>
+    <input type="text" name="cidade" required><br>
+
+    <label for="bairro">Bairro:</label>
+    <input type="text" name="bairro" required><br>
+
+    <label for="tipo">Tipo:</label>
+    <select name="tipo">
+      {% for t in tipos %}
+        <option value="{{ t }}">{{ t }}</option>
+      {% endfor %}
+    </select><br>
+
+    <label for="m2">Área (m²):</label>
+    <input type="number" name="m2" required><br>
+
+    <label for="quartos">Quartos:</label>
+    <input type="number" name="quartos" required><br>
+
+    <label for="banheiros">Banheiros:</label>
+    <input type="number" name="banheiros" required><br>
+
+    <label for="garagem">Garagem:</label>
+    <input type="number" name="garagem" required><br>
+
+    <label for="ano">Ano de Construção:</label>
+    <input type="number" name="ano" required><br>
+
+    <label for="mobilia">Mobilia:</label>
+    <select name="mobilia">
+      {% for mob in mobilias %}
+        <option value="{{ mob }}">{{ mob }}</option>
+      {% endfor %}
+    </select><br>
+
+    <button type="submit">Avaliar Imóvel</button>
+  </form>
+</body>
+</html>

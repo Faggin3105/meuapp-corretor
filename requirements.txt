@@ -1,8 +1,5 @@
-streamlit
+flask
 pandas
-numpy
-scikit-learn
-joblib
-altair
 matplotlib
 seaborn
+joblib
